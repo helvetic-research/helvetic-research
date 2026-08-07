@@ -1,0 +1,7 @@
+{
+  "$schema": "https://glama.ai/mcp/schemas/server.json",
+  "maintainers": ["KushPatil22"],
+  "name": "Helvetic Research",
+  "description": "Research-only MCP server that turns your AI chat into a quant research desk — backtests, walk-forward, Monte Carlo, and stress tests with a verifiable audit bundle. No trades, no brokers. Live sample (no signup): https://helveticresearch.com/sample",
+  "website": "https://helveticresearch.com"
+}
