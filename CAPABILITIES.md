@@ -1,7 +1,7 @@
 # Capability Catalogue
 
 This catalogue describes the currently available Helvetic Research service. The production
-MCP surface exposes **89 research tools**. Tool selection remains with the connected AI client;
+MCP surface exposes **90 research tools**. Tool selection remains with the connected AI client;
 Helvetic provides deterministic research operations and structured results.
 
 Helvetic Research is research-only. It does not place trades, connect to brokers, or provide

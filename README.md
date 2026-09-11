@@ -21,7 +21,7 @@
 <p align="center">
   <img alt="Research only" src="https://img.shields.io/badge/scope-research%20only-07162f" />
   <img alt="Model Context Protocol" src="https://img.shields.io/badge/protocol-MCP-d7ae60" />
-  <img alt="89 research tools" src="https://img.shields.io/badge/tools-89-07162f" />
+  <img alt="90 research tools" src="https://img.shields.io/badge/tools-90-07162f" />
   <img alt="No trade execution" src="https://img.shields.io/badge/trading-no%20execution-6b7280" />
 </p>
 
@@ -32,7 +32,7 @@ Describe a strategy, portfolio, signal, or track record; your AI translates the 
 validated specification and calls a deterministic research engine. The result comes back with
 metrics, robustness diagnostics, provenance, integrity checks, and reproducibility metadata.
 
-The hosted service exposes **89 MCP research tools**. It does **not** place trades, connect to
+The hosted service exposes **90 MCP research tools**. It does **not** place trades, connect to
 brokers, or provide investment advice.
 
 ## Why it exists

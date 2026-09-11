@@ -22,7 +22,12 @@ hosted engine, not a source-code history. Dates are when a capability went live.
   candlestick, scatter) plus stat cards inside the Helvetic frame, rendered live in the
   conversation on supporting clients. Presentation only. The in-chat result view was also
   streamlined to a high-level quick read, with the full detail on the dashboard result page.
-- The MCP surface now exposes **89 research tools**.
+- **Random-timing test** (new tool): a non-parametric Monte-Carlo null that re-aligns a
+  strategy's own on/off pattern to hundreds of random points in history, preserving its market
+  exposure and holding periods and randomising only the timing, then reports where the real
+  Sharpe falls against that null with an empirical p-value. Answers "is this edge better than
+  random timing on the same instrument?", the empirical companion to the Probabilistic Sharpe test.
+- The MCP surface now exposes **90 research tools**.
 
 ## 2026-08
 
