@@ -1,7 +1,7 @@
 # Capability Catalogue
 
 This catalogue describes the currently available Helvetic Research service. The production
-MCP surface exposes **88 research tools**. Tool selection remains with the connected AI client;
+MCP surface exposes **89 research tools**. Tool selection remains with the connected AI client;
 Helvetic provides deterministic research operations and structured results.
 
 Helvetic Research is research-only. It does not place trades, connect to brokers, or provide
@@ -140,7 +140,9 @@ Caller-supplied inputs are labelled accordingly in provenance and integrity repo
 
 - Interactive result page with metrics, charts, drawdowns, trades, exposures, seasonality,
   cost waterfall, and what-if controls
-- In-chat result application for supported MCP clients
+- In-chat result application for supported MCP clients (a high-level quick read)
+- Adaptive in-chat visual: any chart (bar, line, area, candlestick, scatter) plus stat cards,
+  composed by the AI and rendered in the Helvetic frame
 - PDF tear sheet, Excel workbook, CSV, and JSON exports
 - Plain-language explanations and metric definitions
 - Self-verifying audit bundle with raw series, formulas, hashes, provenance, and assumptions

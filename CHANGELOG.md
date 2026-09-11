@@ -18,7 +18,11 @@ hosted engine, not a source-code history. Dates are when a capability went live.
   multi-asset books.
 - **Composable portfolio constraints**: per-name caps and floors and per-group exposure caps on
   the optimiser.
-- The MCP surface now exposes **88 research tools**.
+- **Adaptive in-chat visual** (new tool): your AI composes any chart (bar, line, area,
+  candlestick, scatter) plus stat cards inside the Helvetic frame, rendered live in the
+  conversation on supporting clients. Presentation only. The in-chat result view was also
+  streamlined to a high-level quick read, with the full detail on the dashboard result page.
+- The MCP surface now exposes **89 research tools**.
 
 ## 2026-08
 
