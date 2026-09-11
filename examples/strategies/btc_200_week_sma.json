@@ -1,0 +1,12 @@
+{
+  "name": "BTC 200-week SMA trend",
+  "strategy_type": "signal",
+  "ticker": "BTC-USD",
+  "start_date": "2018-01-01",
+  "end_date": "2026-01-01",
+  "timeframe": "weekly",
+  "direction": "long",
+  "position_size": 1.0,
+  "entry": [{"left": "price", "operator": "crosses_above", "right": "sma_200"}],
+  "exit": [{"left": "price", "operator": "crosses_below", "right": "sma_200"}]
+}

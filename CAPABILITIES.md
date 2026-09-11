@@ -1,7 +1,7 @@
 # Capability Catalogue
 
 This catalogue describes the currently available Helvetic Research service. The production
-MCP surface exposes **85 research tools**. Tool selection remains with the connected AI client;
+MCP surface exposes **88 research tools**. Tool selection remains with the connected AI client;
 Helvetic provides deterministic research operations and structured results.
 
 Helvetic Research is research-only. It does not place trades, connect to brokers, or provide
@@ -80,6 +80,7 @@ volume profile POC/value area, pivots, rolling Fibonacci retracements, and Heiki
 - Exposure by asset, currency, country, and time
 - Correlation, risk contribution, and return attribution
 - Efficient frontier, maximum Sharpe, minimum volatility, and risk parity
+- Composable weight constraints: per-name caps and floors, and per-group exposure caps
 - Hedge candidate analysis and strategy combination
 - Rebalance-frequency and allocation what-if analysis
 
@@ -94,6 +95,7 @@ Metrics are annualised from the observed data frequency rather than assuming dai
 - Alpha, beta, R², tracking error, information ratio, and capture ratios
 - Win rate, profit factor, payoff ratio, tail ratio, recovery factor
 - Gain-to-pain, Ulcer Performance Index, Common Sense Ratio, and CPC Index
+- System Quality Number (SQN), per-trade MAE/MFE, and long/short trade splits
 - Turnover, exposure, trade statistics, and implementation-cost drag
 
 ## Robustness and validation
@@ -106,7 +108,11 @@ Metrics are annualised from the observed data frequency rather than assuming dai
 - Minimum Track Record Length
 - Historical stress tests and custom shock scenarios
 - Transaction-cost and execution-lag sensitivity
+- Trade-order permutation testing to separate a real edge from sequencing luck
+- Fee-cushion analysis: how much cost the edge absorbs before it breaks even
 - Volatility, trend, and macro regime analysis
+- Benchmark-regime Sharpe decomposition showing which regimes carry the edge
+- Correlation-regime detection for multi-asset books (diversified vs fused)
 - Factor exposure and benchmark regression
 - Alpha decay, signal quality, capacity, and market-impact analysis
 - EVT tail-risk diagnostics
@@ -139,6 +145,16 @@ Caller-supplied inputs are labelled accordingly in provenance and integrity repo
 - Plain-language explanations and metric definitions
 - Self-verifying audit bundle with raw series, formulas, hashes, provenance, and assumptions
 - Explicit result sharing through revocable public permalinks
+
+## Due diligence and record-keeping
+
+- Track-record reconciliation: re-simulate a stated set of rules and compare the claimed return,
+  CAGR, Sharpe, and drawdown against a clean re-run, field by field, with a tolerance verdict
+- Duplicate-strategy detection: fingerprint a run by the trades it actually makes and flag
+  near-duplicates among your saved runs by trade overlap
+- Research journal: log a trade you took with a rationale and strategy tag, close it for an
+  automatic P&L, return, and R-multiple, and review a per-strategy scorecard. Record-keeping
+  only, with no execution and no advice
 
 ## Current structural gaps
 

@@ -1,0 +1,12 @@
+{
+  "name": "Gold 20-month trend",
+  "strategy_type": "futures",
+  "ticker": "GC=F",
+  "start_date": "2005-01-01",
+  "end_date": "2026-01-01",
+  "timeframe": "monthly",
+  "direction": "long",
+  "instrument_type": "futures",
+  "entry": [{"left": "price", "operator": "crosses_above", "right": "sma_20"}],
+  "exit": [{"left": "price", "operator": "crosses_below", "right": "sma_20"}]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "SPY-TLT monthly momentum rotation",
+  "strategy_type": "rotation",
+  "tickers": ["SPY", "TLT"],
+  "start_date": "2005-01-01",
+  "end_date": "2026-01-01",
+  "timeframe": "monthly",
+  "lookback_periods": 6,
+  "top_n": 1,
+  "minimum_momentum": 0.0,
+  "position_size": 1.0
+}

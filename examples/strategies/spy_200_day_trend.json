@@ -1,0 +1,11 @@
+{
+  "name": "SPY 200-day trend",
+  "strategy_type": "signal",
+  "ticker": "SPY",
+  "start_date": "2005-01-01",
+  "end_date": "2026-01-01",
+  "timeframe": "daily",
+  "direction": "long",
+  "entry": [{"left": "price", "operator": "crosses_above", "right": "sma_200"}],
+  "exit": [{"left": "price", "operator": "crosses_below", "right": "sma_200"}]
+}

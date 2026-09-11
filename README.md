@@ -21,7 +21,7 @@
 <p align="center">
   <img alt="Research only" src="https://img.shields.io/badge/scope-research%20only-07162f" />
   <img alt="Model Context Protocol" src="https://img.shields.io/badge/protocol-MCP-d7ae60" />
-  <img alt="85 research tools" src="https://img.shields.io/badge/tools-85-07162f" />
+  <img alt="88 research tools" src="https://img.shields.io/badge/tools-88-07162f" />
   <img alt="No trade execution" src="https://img.shields.io/badge/trading-no%20execution-6b7280" />
 </p>
 
@@ -32,7 +32,7 @@ Describe a strategy, portfolio, signal, or track record; your AI translates the 
 validated specification and calls a deterministic research engine. The result comes back with
 metrics, robustness diagnostics, provenance, integrity checks, and reproducibility metadata.
 
-The hosted service exposes **85 MCP research tools**. It does **not** place trades, connect to
+The hosted service exposes **88 MCP research tools**. It does **not** place trades, connect to
 brokers, or provide investment advice.
 
 ## Why it exists
@@ -111,8 +111,25 @@ Helvetic is designed to challenge a result, not merely produce one:
 - Volatility, trend, and macro regime analysis
 - Factor exposure, alpha decay, capacity, and implementation-cost analysis
 - EVT tail-risk analysis, VaR, and Expected Shortfall
-- A 12-component Research Grade measuring strength of evidence—not whether a strategy is
+- Trade-order permutation testing to separate a real edge from sequencing luck
+- Benchmark-regime Sharpe decomposition showing which regimes the edge actually comes from
+- A 12-component Research Grade measuring strength of evidence, not whether a strategy is
   suitable to trade
+
+## Due diligence and record-keeping
+
+Beyond running your own ideas, Helvetic helps you vet others' claims and track what you actually did:
+
+- **Track-record reconciliation** re-simulates a stated set of rules and reconciles the claimed
+  return, CAGR, Sharpe, and drawdown against a clean re-run, field by field, flagging any drift
+  beyond tolerance. The due-diligence answer to "is this track record real?".
+- **Duplicate-strategy detection** fingerprints a strategy by the trades it actually makes and
+  flags near-duplicates among your saved runs, so a "new" idea that is really an old bet in a
+  different costume is caught even when the rules look different.
+- **Research journal** lets you log a trade you actually took with your rationale and a strategy
+  tag, close it for an automatic P&L, return, and R-multiple, and review a per-strategy scorecard
+  (win rate, expectancy, profit factor). It closes the research-to-reality loop. This is
+  record-keeping only: Helvetic executes nothing and gives no advice.
 
 ## Outputs and reproducibility
 
@@ -131,15 +148,23 @@ audit bundle containing raw series, formulas, hashes, assumptions, and provenanc
 
 ## Connect an AI client
 
+Helvetic is a hosted, remote MCP server. There is nothing to install: you point your AI client
+at one URL and authorise it once with Google.
+
 1. Visit **[helveticresearch.com](https://helveticresearch.com)** and continue with Google.
-2. Open **[/connect](https://helveticresearch.com/connect)** for client-specific instructions.
-3. Add the hosted MCP endpoint and complete OAuth:
+2. Add the hosted MCP endpoint to your client and complete the OAuth prompt:
 
    ```text
    https://helveticresearch.com/mcp
    ```
 
-4. Start with a complete research request, for example:
+   - **Claude** (Desktop or web): Settings → Connectors → Add custom connector → paste the URL.
+   - **ChatGPT** (Developer mode / connectors): add an MCP server with the URL above.
+   - **Cursor / Codex / other MCP clients**: add a remote MCP server pointing at the URL.
+   - Full, client-specific steps with screenshots: **[/connect](https://helveticresearch.com/connect)**.
+
+3. Send a complete research request. A good first prompt names a ticker, a date range, the rule,
+   and the costs:
 
    ```text
    Backtest SPY from 2005-01-01 to 2026-01-01. Go long when price crosses
@@ -147,6 +172,9 @@ audit bundle containing raw series, formulas, hashes, assumptions, and provenanc
    Apply 10 bps transaction costs, show the key metrics, then run a
    walk-forward test and an overfitting check.
    ```
+
+More copy-paste starter prompts and ready-to-run strategy specifications are in
+**[`examples/`](examples/)**.
 
 The Free plan includes **250 research credits per month** and full available history from
 community data sources. Heavy workflows use more credits than lightweight lookups.
